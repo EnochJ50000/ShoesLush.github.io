@@ -17,33 +17,23 @@ body {
 nav {
   background-color: #333;
   color: white;
-  padding: 2rem 2rem;
+  padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: sticky;
   top: 0;
   z-index: 100;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 nav .logo h1 {
   font-size: 2rem;
   letter-spacing: 2px;
-  font-weight: bold;
-}
-
-nav .logo img {
-  width: 40px;
-  height: auto;
-  margin-right: 10px;
 }
 
 .nav-links {
   list-style-type: none;
   display: flex;
-  justify-content: space-between;
-  margin-left: auto;
 }
 
 .nav-links li {
@@ -59,20 +49,6 @@ nav .logo img {
 
 .nav-links a:hover {
   color: #f1c40f;
-}
-
-/* Hamburger Menu */
-.navbar-toggle {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-}
-
-.navbar-toggle div {
-  width: 25px;
-  height: 3px;
-  background-color: white;
-  margin: 4px 0;
 }
 
 /* Main Section */
@@ -173,68 +149,20 @@ footer {
   font-size: 0.9rem;
 }
 
-/* Mobile and Tablet Responsive Styling */
-@media screen and (max-width: 1024px) {
+/* Mobile Responsive Styling */
+@media screen and (max-width: 768px) {
   nav {
-    padding: 1rem;
+    flex-direction: column;
+    text-align: center;
   }
 
   .nav-links {
-    display: none;
-    width: 100%;
-    text-align: center;
     margin-top: 1rem;
-  }
-
-  .nav-links li {
-    margin: 1rem 0;
-  }
-
-  .navbar-toggle {
-    display: flex;
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  .footer-container {
     flex-direction: column;
   }
 
-  .footer-links ul {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .footer-logo, .footer-links, .social-links, .footer-contact {
-    margin-bottom: 1.5rem;
-  }
-}
-
-/* For Mobile Phones */
-@media screen and (max-width: 1024px) {
-  nav {
-    padding: 1rem;
-  }
-
-  .nav-links {
-    display: none;
-    width: 100%;
-    text-align: center;
-    margin-top: 1rem;
-  }
-
   .nav-links li {
-    margin: 1rem 0;
-  }
-
-  .navbar-toggle {
-    display: flex;
-  }
-
-  .nav-links.active {
-    display: flex;
+    margin: 0.5rem 0;
   }
 
   .footer-container {
@@ -252,7 +180,7 @@ footer {
   }
 }
 
-/* Product Section */
+/* General Styling for Product Section */
 .product-container {
   display: flex;
   flex-wrap: wrap;
@@ -260,32 +188,37 @@ footer {
   margin: 20px;
 }
 
+/* Styling for each product box */
 .product-box {
   background-color: white;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 220px;
+  width: 200px;
   margin: 10px;
   text-align: center;
   overflow: hidden;
 }
 
+/* Image styling */
 .product-box img {
   width: 100%;
   height: auto;
   border-bottom: 2px solid #ddd;
 }
 
+/* Product details */
 .product-details {
   padding: 10px;
 }
 
+/* Price styling */
 .product-price {
   font-size: 18px;
   color: #e74c3c;
   margin-top: 5px;
 }
 
+/* Add to Cart button styling */
 .add-to-cart {
   background-color: #3498db;
   color: white;
@@ -297,14 +230,29 @@ footer {
   width: 100%;
 }
 
+/* Add to Cart button hover effect */
 .add-to-cart:hover {
   background-color: #2980b9;
 }
 
+/* Logo styling */
+nav .logo {
+  display: flex;
+  align-items: center;
+}
+
+nav .logo img {
+  width: 50px;
+  height: auto;
+  margin-right: 10px;
+}
+
+
+/* Set maximum size for images in the checkout page */
 #product-image {
-  max-width: 300px;
-  max-height: 300px;
+  max-width: 300px; /* You can adjust this based on your design */
+  max-height: 300px; /* You can adjust this based on your design */
   width: auto;
   height: auto;
-  object-fit: cover;
+  object-fit: cover; /* Ensures the image maintains its aspect ratio */
 }
