@@ -1,16 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Shoes.Lush - Your Perfect Pair Awaits</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<!-- Navbar -->
+
 
     <!-- Navigation Bar -->
     <nav>
+      <div class="logo">
+        <h1>Logo</h1>
+      </div>
+      <div class="navbar-toggle">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
             <h1>Shoes.Lush</h1>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
@@ -19,6 +26,18 @@
             <li><a href="cont.html">Contact</a></li>
         </ul>
     </nav>
+
+    <script>
+      // Select the hamburger icon and navigation links
+      const navbarToggle = document.querySelector('.navbar-toggle');
+      const navLinks = document.querySelector('.nav-links');
+    
+      // Toggle the 'active' class on navbar click (hamburger icon)
+      navbarToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+      });
+    </script>
+    
 
     <!-- Main Content -->
     <section id="home">

@@ -213,19 +213,28 @@ footer {
 }
 
 /* For Mobile Phones */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   nav {
-    flex-direction: column;
-    text-align: center;
+    padding: 1rem;
   }
 
   .nav-links {
+    display: none;
+    width: 100%;
+    text-align: center;
     margin-top: 1rem;
-    flex-direction: column;
   }
 
   .nav-links li {
-    margin: 0.5rem 0;
+    margin: 1rem 0;
+  }
+
+  .navbar-toggle {
+    display: flex;
+  }
+
+  .nav-links.active {
+    display: flex;
   }
 
   .footer-container {
